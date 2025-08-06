@@ -1,12 +1,18 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "pages-test",
+  "name": "my-super-custom-name-for-only-me",
   "compatibility_date": "2025-08-06",
   "pages_build_output_dir": "./dist",
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
-    "MY_VAR": "my-test-variable",
+    "MY_VAR": "my-variable"
   },
+  "kv_namespaces": [
+    {
+      "binding": "PAGES_TEST_KV_NAMESPACE",
+      "id": "e047391bf35740f0a3335c438130cfbd"
+    }
+  ]
   // "d1_databases": [
   //   {
   //     "binding": "MY_DB",

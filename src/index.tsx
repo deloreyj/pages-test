@@ -5,8 +5,15 @@ const app = new Hono<{ Bindings: CloudflareBindings }>();
 
 app.use(renderer);
 
-app.get("/", (c) => {
-  return c.render(<h1>Hello! {c.env.MY_VAR}</h1>);
+app.get("/", async (c) => {
+  const now = new Date().toISOString();
+  await c.env.PAGES_TEST_KV_NAMESPACE.put(now, now);
+  const items = await c.env.PAGES_TEST_KV_NAMESPACE.list();
+  return c.render(
+    <h1>
+      Hello! {c.env.MY_VAR} {JSON.stringify(items, null, 2)}
+    </h1>,
+  );
 });
 
 export default app;
