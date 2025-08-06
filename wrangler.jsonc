@@ -5,14 +5,14 @@
   "pages_build_output_dir": "./dist",
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
-    "MY_VAR": "my-variable",
+    "MY_VAR": "my-variable"
   },
   "kv_namespaces": [
     {
       "binding": "PAGES_TEST_KV_NAMESPACE",
-      "id": "e047391bf35740f0a3335c438130cfbd",
-    },
-  ],
+      "id": "e047391bf35740f0a3335c438130cfbd"
+    }
+  ]
   // "d1_databases": [
   //   {
   //     "binding": "MY_DB",
