@@ -11,7 +11,7 @@ app.get("/", async (c) => {
   const items = await c.env.PAGES_TEST_KV_NAMESPACE.list();
   return c.render(
     <h1>
-      Hello! {c.env.MY_VAR} {JSON.stringify(items, null, 2)}
+      Hello new! {c.env.MY_VAR} {JSON.stringify(items, null, 2)}
     </h1>,
   );
 });
